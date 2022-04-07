@@ -36,10 +36,16 @@ namespace PO_W_503
     {
         static void Main(string[] args)
         {
-            int a = 10;
-            Console.WriteLine("Inkrementacja prefiksowa : " + ++a);
-            a = 10;
-            Console.WriteLine("Inkrementacja postfiksowa : " + a++);
+            Values a = new Values(10);
+            int b = 10;
+            ++a;
+            Console.WriteLine("\n\n  Inkrementacja prefiksowa obiektu: " + a.Wartosc);
+            Console.WriteLine("\n  Inkrementacja prefiksowa pola: " + ++b);
+            a = new Values(10);
+            b = 10;
+            a++;
+            Console.WriteLine("\n  Inkrementacja postfiksowa obiektu: " + a.Wartosc);
+            Console.WriteLine("\n  Inkrementacja postfiksowa pola: " + b++);
             Console.ReadKey();
         }
     }
